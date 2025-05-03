@@ -104,35 +104,17 @@ int main() {
     printf("Densidade Populacional: %.2f\n", densidadePopulacionalCarta2);
     printf("PIB per Capita: %.2f\n", pibPerCapitaCarta2);
 
-    // Declaração das variaveis de comparação das cartas
-    int comparacaoPopulacao = populacaoCidadeCarta1 > populacaoCidadeCarta2;
-    int comparacaoArea = areaEmKmCidadeCarta1 > areaEmKmCidadeCarta2;
-    int comparacaoPib = pibCidadeCarta1 > pibCidadeCarta2;
-    int comparacaoPontosTuristicos = pontosTuristicosCidadeCarta1 > pontosTuristicosCidadeCarta2;
-    int comparacaoDensidade = inversoDensidadeCarta1 < inversoDensidadeCarta2;
-    int comparacaoPibPerCapita = pibPerCapitaCarta1 > pibPerCapitaCarta2;
-    int comparacaoSuperPoder = superPoderCarta1 > superPoderCarta2;
-
     // Exibindo o resultado da comparação das cartas
-    printf("Comparação de Cartas:\n");
-    printf("População: Carta %d venceu (%d)\n", 2 - comparacaoPopulacao, comparacaoPopulacao);
-    printf("Área: Carta %d venceu (%d)\n", 2 - comparacaoArea, comparacaoArea);
-    printf("PIB: Carta %d venceu (%d)\n", 2 - comparacaoPib, comparacaoPib);
-    printf("Pontos Turísticos: Carta %d venceu (%d)\n", 2 - comparacaoPontosTuristicos, comparacaoPontosTuristicos);
-    printf("Densidade Populacional: Carta %d venceu (%d)\n", 2 - comparacaoDensidade, comparacaoDensidade);
-    printf("PIB per Capita: Carta %d venceu (%d)\n", 2 - comparacaoPibPerCapita, comparacaoPibPerCapita);
-    printf("Super Poder: Carta %d venceu (%d)\n", 2 - comparacaoSuperPoder, comparacaoSuperPoder);
+    printf("Comparação de Cartas (Atributo: População):\n");
+    printf("\nCarta 1 - %s: %d\n", nomeCidadeCarta1, populacaoCidadeCarta1);
+    printf("Carta 2 - %s: %d\n", nomeCidadeCarta2, populacaoCidadeCarta2);
 
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    // Comparação
+    if (populacaoCidadeCarta1 > populacaoCidadeCarta2) {
+        printf("Resultado: Carta 1 (%s) venceu!\n", nomeCidadeCarta1);
+    } else {
+        printf("Resultado: Carta 2 (%s) venceu!\n", nomeCidadeCarta2);
+    }
 
     return 0;
 }
